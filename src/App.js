@@ -6,10 +6,13 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 //import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
 //import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './pages';
 import './App.css';
+import { Sidebar } from '@syncfusion/ej2/navigations';
 
 //import { useStateContext } from './contexts/ContextProvider';
 
 const App = () => {
+
+  const activeMenu = false;
   return (
     <div>
       <BrowserRouter>
@@ -24,6 +27,44 @@ const App = () => {
 
         </div>
 
+          {activeMenu ? (
+            <div className='w-72 fixed sidebar dark:bg=secondary-dark-bg bg-white' >
+              Sidebar
+               </div>
+          ) : (
+            <div className='w-0 dark:bg-secondary-dark-bg'>
+               SideBar
+               </div>
+          )}
+          <div className= {
+            `dark:bg-main-bg bg-main-bg min-h-screen w-full ${activeMenu ? 'md:ml-72':'flex-2'}`
+           
+          }>
+            <div className='fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full'>
+              Navbar
+            </div>
+
+          </div>
+
+          <div>
+            <Routes>
+              {/* Dashboard */}
+              <Route path='/' element="expense"/>
+              <Route path='/dashboard' element="dashboard"/>
+              {/* Pages */}
+              <Route path='/expense' element="expense"/>
+              <Route path='/upcomingexpense' element="upcomingexpense"/>
+              {/* Charts */}
+              <Route path='/line' element="line"/>
+              <Route path='/area' element="area"/>
+              <Route path='/bar' element="bar"/>
+              <Route path='/pie' element="pie"/>
+              <Route path='/financial' element="financial"/>
+              <Route path='/pyramid' element="Pyramid"/>
+              <Route path='/stacked' element="stacked"/>
+
+            </Routes>
+          </div>
       </div>
       
       </BrowserRouter>
