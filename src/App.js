@@ -54,6 +54,7 @@ const App = () => {
               {/* Pages */}
               <Route path='/expense' element="expense"/>
               <Route path='/upcomingexpense' element="upcomingexpense"/>
+              <Route path='/limitexpense' element="limitexpense"/>
               {/* Charts */}
               <Route path='/line' element="line"/>
               <Route path='/area' element="area"/>
