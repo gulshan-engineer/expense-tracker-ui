@@ -1,6 +1,7 @@
 export { default as Expense } from './Expense';
 export { default as LimitExpense } from './LimitExpense';
-export { default as UpcomingExpense } from './UpcomingExpense';
+export { default as UpComingExpense } from './UpComingExpense';
+export { default as Dashboard } from './Dashboard';
 export { default as Area } from './Charts/Area';
 export { default as Bar } from './Charts/Bar';
 export { default as ColorMapping } from './Charts/ColorMapping';

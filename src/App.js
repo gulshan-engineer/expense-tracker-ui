@@ -4,7 +4,7 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import {   Stacked, Pyramid, Line, Area, Bar, Pie, Financial, ColorMapping } from './pages';
+import { Dashboard,Expense, LimitExpense, UpComingExpense,  Stacked, Pyramid, Line, Area, Bar, Pie, Financial, ColorMapping } from './pages';
 import './App.css';
 
 //import { useStateContext } from './contexts/ContextProvider';
@@ -28,11 +28,11 @@ const App = () => {
 
           {activeMenu ? (
             <div className='w-72 fixed sidebar dark:bg=secondary-dark-bg bg-white' >
-              Sidebar
+              <Sidebar/>
                </div>
           ) : (
             <div className='w-0 dark:bg-secondary-dark-bg'>
-               SideBar
+               <Sidebar/>
                </div>
           )}
           <div className= {
@@ -40,7 +40,7 @@ const App = () => {
            
           }>
             <div className='fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full'>
-              Navbar
+              <Navbar/>
             </div>
 
           </div>
@@ -48,21 +48,21 @@ const App = () => {
           <div>
             <Routes>
               {/* Dashboard */}
-              <Route path='/' element="expense"/>
-              <Route path='/dashboard' element="dashboard"/>
+              <Route path='/' element={<Dashboard/>}/>
+              <Route path='/dashboard' element={<Dashboard/>}/>
               {/* Pages */}
-              <Route path='/expense' element="expense"/>
-              <Route path='/upcomingexpense' element="upcomingexpense"/>
-              <Route path='/limitexpense' element="limitexpense"/>
+              <Route path='/expense' element={<Expense/>}/>
+              <Route path='/upcomingexpense' element={<UpComingExpense/>}/>
+              <Route path='/limitexpense' element={<LimitExpense/>}/>
               {/* Charts */}
-              <Route path='/line' element="line"/>
-              <Route path='/area' element="area"/>
-              <Route path='/bar' element="bar"/>
-              <Route path='/pie' element="pie"/>
-              <Route path='/financial' element="financial"/>
-              <Route path='/pyramid' element="Pyramid"/>
-              <Route path='/stacked' element="stacked"/>
-
+              <Route path='/line' element={<Line/>}/>
+              <Route path='/area' element={<Area/>}/>
+              <Route path='/bar' element={<Bar/>}/>
+              <Route path='/pie' element={<Pie/>}/>
+              <Route path='/financial' element={<Financial/>}/>
+              <Route path='/pyramid' element={<Pyramid/>}/>
+              <Route path='/stacked' element={<Stacked/>}/>
+              <Route path='/colormapping' element={<ColorMapping/>}/>
             </Routes>
           </div>
       </div>
