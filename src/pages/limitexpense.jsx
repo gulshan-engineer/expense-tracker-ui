@@ -1,9 +1,9 @@
 import React from 'react'
 
-const limitexpense = () => {
+const LimitExpense = () => {
   return (
     <div>limitexpense</div>
   )
 }
 
-export default limitexpense
+export default LimitExpense

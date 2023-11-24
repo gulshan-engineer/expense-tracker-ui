@@ -1,9 +1,9 @@
 import React from 'react'
 
-const upcomingexpense = () => {
+const UpcomingExpense = () => {
   return (
     <div>upcomingexpense</div>
   )
 }
 
-export default upcomingexpense
+export default UpcomingExpense
