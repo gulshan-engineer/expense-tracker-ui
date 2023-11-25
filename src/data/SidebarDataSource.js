@@ -28,11 +28,11 @@ export const links = [
           icon: <RiMoneyPoundCircleFill />,
         },
         {
-          name: 'upcomingexpense',
+          name: 'upcoming expense',
           icon: <GiPayMoney />,
         },
         {
-          name: 'limitexpense',
+          name: 'limit expense',
           icon: <MdMoneyOffCsred />,
         },
       ],
