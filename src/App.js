@@ -7,11 +7,11 @@ import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
 import { Dashboard,Expense, LimitExpense, UpComingExpense,  Stacked, Pyramid, Line, Area, Bar, Pie, Financial, ColorMapping } from './pages';
 import './App.css';
 
-//import { useStateContext } from './contexts/ContextProvider';
+import { useStateContext } from './contexts/ContextProvider';
 
 const App = () => {
 
-  const activeMenu = true;
+  const {activeMenu} = useStateContext();
   return (
     <div>
       <BrowserRouter>
